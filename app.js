@@ -65,4 +65,44 @@ const allPost = async () => {
   });
 };
 
+// latest post section
+const latestPost = async () => {
+  const response = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const data = await response.json();
+
+  const latestPosts = data; // Renamed variable to avoid conflict
+
+  const latestContainer = document.getElementById("post-card");
+
+  latestPosts.forEach((latestItem) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <div class="card lg:h-[500px] bg-base-100 shadow-xl">
+          <figure class="px-5 pt-5">
+              <img src="${latestItem.cover_image}" alt="Shoes"
+                  class="rounded-xl bg-[#12132D0D" />
+          </figure>
+          <div class="card-body ">
+              <h2 class="card-title"><i class="fa-regular fa-calendar-check"></i> ${latestItem.author.posted_date}</h2>
+              <p class="text-1xl font-bold">${latestItem.title}</p>
+              <p>${latestItem.description}</p>
+              <div class="card-actions">
+                  <div><img class="w-10 h-10" src="${latestItem.profile_image
+                  }" alt=""></div>
+                  <div>
+                      <p class="text-1xl font-bold">${latestItem.author.name}</p>
+                      <p class="">${latestItem.author.designation || "Unknown"}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      `;
+    latestContainer.appendChild(div);
+  });
+};
+
+latestPost();
+
 allPost();

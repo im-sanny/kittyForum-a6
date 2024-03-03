@@ -104,12 +104,12 @@
         </div>
         <!-- discuss card -->
 
-        <div class="mt-10">
+        <div id="discuss-card" class="mt-10 my-5">
 
-            <div class="lg:flex justify-between gap-5">
-                <div class="hero shadow-xl w-4/ rounded-lg  bg-[#797DFC1A]">
+            <div  class="lg:flex justify-between gap-5">
+                <div class="hero shadow-xl lg:w-4/6 rounded-lg  bg-[#797DFC1A]">
                     <div class="hero-content px-5 lg:flex-row">
-                        <div class="avatar -mt-44 indicator">
+                        <div class="avatar -mt-44 indicator bg-blue-500">
                             <span class="indicator-item badge badge-secondary"></span>
                             <div class="w-10 h-10 rounded-lg">
                                 <img alt="Tailwind CSS examples"
@@ -123,7 +123,7 @@
                             </div>
                             <div>
                                 <h3 class="text-1xl font-bold">10 Kids Unaware of Their Halloween Costume</h3>
-                                <p>It's one thing to subject yourself to a Halloween costume mishap because, hey, that's
+                                <p>It's  mishap because, hey, that's
                                     your prerogative</p>
                                 <hr class="my-5">
                                 <div class="flex justify-between">
@@ -132,9 +132,8 @@
                                         <p><i class="fa-regular fa-eye"></i> 1,568</p>
                                         <p><i class="fa-regular fa-clock"></i> 5 min</p>
                                     </div>
-                                    <div class="-mt-1">
-                                        <button class="btn bg-[#10B981] btn-sm btn-circle"><i
-                                                class="fa-regular fa-envelope-open"></i></button>
+                                    <div class="-mt-1 w-2/6 lg:w-96 flex justify-end">
+                                        <button class="btn bg-[#10B981] btn-sm btn-circle"><i class="fa-regular fa-envelope-open"></i></button>
                                     </div>
 
                                 </div>
@@ -149,16 +148,18 @@
                             <p>Title</p>
                             <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span>4</span>)</p>
                         </div>
-                        <div class="bg-[#FFFF] p-2 rounded-lg flex ">
+                        <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex ">
                             <p>10 Kids Unaware of Their Halloween Costume</p>
-                            <p><i class="fa-regular fa-eye"></i>1,568</p>
+                            <div class="flex w-20 justify-between">
+                                <p class="w-20"><i class="fa-regular fa-eye"></i> 1,568</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- forum section -->
-        <div class="mt-5 lg:mt-24 ">
+        <div id="forum-card" class="mt-5 lg:mt-24 ">
             <div class="bg-cover bg-center bg-fixed" style="background-image: url('assets/images/bgbanner.png');">
                 <div class="card bg-cover py-5 bg-[#12132D] bg-center bg-fixed bg-base-100 lg:h-96 shadow-xl">
                     <div class="flex justify-between mx-10 ">
@@ -190,8 +191,8 @@
             </div>
         </div>
         <!-- post card section -->
-        <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
-            <div class="">
+        <div id="post-card" class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+            
                 <div class="card bg-base-100 shadow-xl">
                     <figure class="px-5 pt-5">
                         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
@@ -212,51 +213,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="">
-                <div class="card  bg-base-100 shadow-xl">
-                    <figure class="px-5 pt-5">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body ">
-                        <h2 class="card-title"><i class="fa-regular fa-calendar-check"></i> 29 January 2024</h2>
-                        <p class="text-1xl font-bold">What will a mars habitat force that impact in our daily life!!!
-                        </p>
-                        <p>Yes, you can run unit tests and view the results directly within the app. </p>
-                        <div class="card-actions">
-                            <div><img class="w-10 h-10" src="assets/images/joinforum.png" alt="">
-                            </div>
-                            <div>
-                                <p class="text-1xl font-bold">Cameron Williamson</p>
-                                <p class="">Unknown</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-                <div class="card bg-base-100 shadow-xl">
-                    <figure class="px-5 pt-5">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                            class="rounded-xl" />
-                    </figure>
-                    <div class="card-body ">
-                        <h2 class="card-title"><i class="fa-regular fa-calendar-check"></i> 29 January 2024</h2>
-                        <p class="text-1xl font-bold">What will a mars habitat force that impact in our daily life!!!
-                        </p>
-                        <p>Yes, you can run unit tests and view the results directly within the app. </p>
-                        <div class="card-actions">
-                            <div><img class="w-10 h-10" src="assets/images/joinforum.png" alt="">
-                            </div>
-                            <div>
-                                <p class="text-1xl font-bold">Cameron Williamson</p>
-                                <p class="">Unknown</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <!-- end of latest post section -->
     </main>

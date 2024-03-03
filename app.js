@@ -1,14 +1,16 @@
 // post section
-const allPost = async () => {
+const allPost = async (searchText = '') => {
   const response = await fetch(
-    "https://openapi.programming-hero.com/api/retro-forum/posts"
+    ` https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`
   );
   const data = await response.json();
 
-  const allPost = data.posts;
+  const postData = data.posts;
   const allPostContainer = document.getElementById("discuss-card");
-  allPost.forEach((items) => {
-    // console.log(items);
+  allPostContainer.textContent = '';
+  
+  postData.forEach((items) => {
+
     const div = document.createElement("div");
     div.innerHTML = `
     <div  class="lg:flex mt-5 justify-between gap-5">
@@ -16,7 +18,7 @@ const allPost = async () => {
         <div class="hero-content px-5 lg:flex-row">
         
         <div class="avatar -mt-44 indicator">
-                <span class="indicator-item badge bg-green-500"></span>
+                <span class="indicator-item badge ${items.isActive?"bg-red-600":"bg-green-400"}"></span>
                 <div class="w-10 h-10 rounded-lg">
                     <img alt="Tailwind CSS examples"
                         src="${items.image}" />
@@ -72,7 +74,7 @@ const latestPost = async () => {
   );
   const data = await response.json();
 
-  const latestPosts = data; // Renamed variable to avoid conflict
+  const latestPosts = data;
 
   const latestContainer = document.getElementById("post-card");
 
@@ -103,6 +105,14 @@ const latestPost = async () => {
   });
 };
 
-latestPost();
 
+// handle search
+const handleSearch = () => {
+    const searchField = document.getElementById('search-field');
+    const searchText = searchField.value;
+    console.log(searchText);
+    allPost(searchText);
+}
+
+latestPost();
 allPost();

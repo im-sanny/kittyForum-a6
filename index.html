@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Forum</title>
+    <title>MiNh Forum</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/304c7664cf.js" crossorigin="anonymous"></script>
-
+    <style>
+        .text-gradient {
+            background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +24,7 @@
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
-                    <h1 class="text-3xl font-extrabold">ReTro</h1>
+                    <h1 class="text-3xl font-extrabold">MiNh</h1>
                 </div>
                 <div class="navbar-end">
                     <div class="tooltip tooltip-top" data-tip="home">
@@ -57,14 +64,16 @@
                     <div class="flex justify-between">
                         <div class="w-3/5 -ml-5">
                             <h2 class="card-title text-white text-3xl lg:text-4xl font-extrabold">Welcome to the</h2>
-                            <h2 class="text-white text-3xl lg:text-4xl font-extrabold"><span>ReTro</span> Forum</h2>
-                            <p class="text-white mt-5 lg:w-[350px]">Share your favorite opinion and win a wp forum coffee mug!</p>
+                            <h2 class="text-white text-3xl lg:text-4xl font-extrabold"><span class="text-gradient">MiNh</span> Forum</h2>
+                            <p class="text-white mt-5 lg:w-[350px]">Share your favorite opinion and win a wp forum
+                                coffee mug!</p>
 
 
                             <div
                                 class="input lg:w-80 h-10 mt-2 lg:mt-5 input-bordered rounded-full flex justify-between items-center gap-2">
                                 <input id="search-field" type="text" class="" placeholder="Search here..." />
-                                <button onclick="handleSearch()" class="btn btn-sm rounded-full bg-blue-500 text-white ">Search</button>
+                                <button onclick="handleSearch()"
+                                    class="btn btn-sm rounded-full bg-blue-500 text-white ">Search</button>
                             </div>
                         </div>
                         <div class="flex items-center justify-center h-full lg:mt-3">
@@ -95,8 +104,12 @@
         </div>
         <!-- End of banner section -->
 
+        <!-- spin loader -->
+        <div id="loading-spinner" class="text-center my-5 ">
+            <span class="loading loading-bars" style="height: 10rem; width: 5rem;"></span>
+        </div>
         <!-- main section -->
-        <div class="mt-14 flex justify-center items-center text-center">
+        <div class="my-5 flex justify-center items-center text-center">
             <div class="w-[600px]">
                 <h1 class="text-3xl font-extrabold">Let's Discuss</h1>
                 <p class="mt-2">Yes, you can run unit tests and view the results directly within the app. The integrated
@@ -142,21 +155,23 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="card mt-5 lg:mt-0 lg:w-2/6 bg-[#12132D0D] shadow-xl">
-                    <div class="p-4 ">
-                        <div class="flex justify-between my-2">
-                            <p>Title</p>
-                            <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span>4</span>)</p>
-                        </div>
-                        <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex ">
-                            <p>10 Kids Unaware of Their Halloween Costume</p>
-                            <div class="flex w-20 justify-between">
-                                <p class="w-20"><i class="fa-regular fa-eye"></i> 1,568</p>
+            </div> -->
+               
+            <!-- <div id="right-card">
+                    <div class="card mt-5 lg:mt-0 lg:w-2/6 bg-[#12132D0D] shadow-xl">
+                        <div class="p-4 ">
+                            <div class="flex justify-between my-2">
+                                <p>Title</p>
+                                <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span>4</span>)</p>
+                            </div>
+                            <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex ">
+                                <p>10 Kids Unaware of Their Halloween Costume</p>
+                                <div class="flex w-20 justify-between">
+                                    <p class="w-20"><i class="fa-regular fa-eye"></i> 1,568</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div> -->
         </div>
         <!-- forum section -->
@@ -165,7 +180,7 @@
                 <div class="card bg-cover py-5 bg-[#12132D] bg-center bg-fixed bg-base-100 lg:h-96 shadow-xl">
                     <div class="flex justify-between mx-10 ">
                         <div class="w-3/5 mt-2 lg:mt-24">
-                            <h1 class="text-white mx-5 text-3xl font-extrabold">Join Our Forum</h1>
+                            <h1 class="mx-5 text-3xl font-extrabold text-gradient">Join Our Forum</h1>
                             <p class="text-white mx-5 mt-5">Share your favorite opinion and win and wp forum coffee mug!
                                 Yes, you can run unit tests and view the results directly within the app. </p>
                             <button
@@ -193,8 +208,8 @@
         </div>
         <!-- post card section -->
         <div id="post-card" class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
-            
-                <!-- <div class="card bg-base-100 shadow-xl">
+
+            <!-- <div class="card bg-base-100 shadow-xl">
                     <figure class="px-5 pt-5">
                         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
                             class="rounded-xl" />
@@ -214,7 +229,6 @@
                         </div>
                     </div>
                 </div> -->
-            
         </div>
         <!-- end of latest post section -->
     </main>
@@ -223,7 +237,7 @@
     <!-- footer section -->
     <footer class="footer footer-center p-10 text-primary-content bg-gradient-to-r from-[#7275f70d] to-blue-100 mt-10">
         <div>
-            <p class="text-3xl font-bold text-black"> ReTro </p>
+            <p class="text-3xl font-bold text-gradient"> MiNh </p>
             <p class="lg:w-[450px] text-black">Contrary to popular belief, Lorem Ipsum is not simply random text.
                 It has roots in a piece of classical Latin literature from 45 BC</p>
         </div>

@@ -40,31 +40,20 @@ const allPost = async (searchText = '') => {
                             <p><i class="fa-regular fa-clock"></i> ${items.posted_time} min</p>
                         </div>
                         <div class="-mt-1 w-2/6 lg:w-96 flex justify-end">
-                            <button class="btn bg-[#10B981] btn-sm btn-circle"><i class="fa-regular fa-envelope-open"></i></button>
+                            <button onclick="markAsRead()" class="btn bg-[#10B981] btn-sm btn-circle"><i class="fa-regular fa-envelope-open"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="card mt-5 lg:mt-0 lg:w-2/6 bg-[#12132D0D] shadow-xl">
-        <div class="p-4 ">
-            <div class="flex justify-between my-2">
-                <p>Title</p>
-                <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span>4</span>)</p>
-            </div>
-            <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex ">
-            <p>10 Kids Unaware of Their Halloween Costume</p>
-            <div class="flex w-20 justify-between">
-                <p class="w-20"><i class="fa-regular fa-eye"></i> 1,568</p>
-            </div>
-        </div>
-    </div>
+    /* right card place */
+    
 </div>
     `;
     allPostContainer.appendChild(div);
   });
+  toggleLoadingSpinner(false);
 };
 
 // latest post section
@@ -91,7 +80,7 @@ const latestPost = async () => {
               <p class="text-1xl font-bold">${latestItem.title}</p>
               <p>${latestItem.description}</p>
               <div class="card-actions">
-                  <div><img class="w-10 h-10" src="${latestItem.profile_image
+                  <div><img class="w-10 h-10 rounded-s-full" src="${latestItem.profile_image
                   }" alt=""></div>
                   <div>
                       <p class="text-1xl font-bold">${latestItem.author.name}</p>
@@ -108,11 +97,33 @@ const latestPost = async () => {
 
 // handle search
 const handleSearch = () => {
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
     allPost(searchText);
 }
+const handleSearch2 = () => {
+    toggleLoadingSpinner(true);
+    const searchField = document.getElementById('search-field2');
+    const searchText = searchField.value;
+    console.log(searchText);
+    allPost(searchText);
+}
+
+const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner')
+    if (isLoading) {
+        loadingSpinner.classList.remove('hidden');
+        setTimeout(() => {
+            loadingSpinner.classList.add('hidden');
+        }, 2000);
+        
+    } else {
+        loadingSpinner.classList.add('hidden');
+    }
+}
+
 
 latestPost();
 allPost();

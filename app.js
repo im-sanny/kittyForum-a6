@@ -66,7 +66,7 @@ const allPost = async (searchText = "") => {
   toggleLoadingSpinner(false);
 };
 
-// fuck
+// :((
 const handleAddInfo = async (title, viewCount) => {
   const rightSideCard = document.getElementById("right-card");
   const div = document.createElement("div");
@@ -85,17 +85,18 @@ const handleAddInfo = async (title, viewCount) => {
   rightSideCard.appendChild(div);
 };
 
-let read = 0;
-const mark = document.getElementById("count");
+document.addEventListener("DOMContentLoaded", function() {
+  let read = 0;
+  const countSpan = document.getElementById("count");
+  if (countSpan) {
+    countSpan.addEventListener("click", function () {
+      read ++;
+      countSpan.innerText = read;
+    });
+  } 
+});
 
-if (mark) {
-  mark.addEventListener("click", function () {
-    read += 1;
-    mark.innerText = read;
-  });
-} else {
-  console.error("Element with id 'count' not found.");
-}
+
 
 // latest post section
 const latestPost = async () => {

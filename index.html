@@ -18,9 +18,9 @@
     </style>
 </head>
 
-<body>
+<body class="">
     <!-- Header section -->
-    <header class="mt-5 lg:mt-8 mx-3 lg:mx-32">
+    <header class="mt-5 lg:mt-8 mx-5 lg:mx-32">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -56,7 +56,7 @@
     </header>
 
     <!-- main section starts from here -->
-    <main class="mx-3 lg:mx-32">
+    <main class="mx-5 lg:mx-32">
 
         <!-- Banner section -->
         <div class="bg-cover bg-center bg-fixed" style="background-image: url('path/to/your/image.jpg');">
@@ -78,7 +78,7 @@
                                 class="input lg:w-80 h-10 my-4 lg:mt-5 input-bordered rounded-full flex justify-between items-center gap-2">
                                 <input id="search-field" type="text" class="" placeholder="Search here..." />
                                 <button onclick="handleSearch()"
-                                    class="btn btn-sm rounded-full bg-blue-500 text-white">Search</button>
+                                    class="btn btn-sm rounded-full -ml-5 bg-blue-500 text-white">Search</button>
                             </div>
                         </div>
                         <div class="lg:flex items-center justify-center h-full lg:mt-3">
@@ -123,21 +123,16 @@
         </div>
         <!-- discuss card -->
         <div class="lg:flex justify-between gap-5">
-            <div id="discuss-card" class="mt-10 my-5 lg:w-[700px]">
-                <!-- Discuss card content goes here -->
+            <div id="discuss-card" class="mt-10 my-5 lg:w-4/6">
             </div>
-            <!-- Button outside discuss card -->
-            <div id="right-card" class=" mt-[60px] bg-[#12132D0D] rounded-lg">
+            <div id="right-card" class=" mt-[60px] bg-[#12132D0D] lg:w-2/6 rounded-lg">
                 <div class="flex justify-between lg:w-[300px] p-5  my-2">
                     <p>Title:</p>
-                    <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span id="count">0</span>)
+                    <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read <span id="count">0</span>
                     </p>
-
                 </div>
-
             </div>
         </div>
-
 
         <!-- forum section -->
         <div id="forum-card" class="mt-14 lg:mt-24">
@@ -181,11 +176,11 @@
     <footer class="footer footer-center p-10 text-primary-content bg-gradient-to-r from-[#7275f70d] to-blue-100 mt-10">
         <div>
             <p class="text-3xl font-bold text-gradient"> MiNh </p>
-            <p class="lg:w-[450px] text-black">Contrary to popular belief, Lorem Ipsum is not simply random text.
-                It has roots in a piece of classical Latin literature from 45 BC</p>
+            <p class="lg:w-[500px] text-black">Minh Forum is a vibrant online community dedicated to discussions, sharing knowledge, and connecting individuals passionate about various topics!</p>
+        </p>
         </div>
-        <div class="-mt-5">
-            <div class="grid grid-flow-col gap-3 ">
+        <div class="">
+            <div class="grid grid-flow-col gap-3 -mt-10">
                 <i class="fa-brands fa-github font-extrabold text-2xl text-black"></i>
                 <i class="fa-brands fa-discord font-extrabold text-2xl text-black"></i>
                 <i class="fa-brands fa-linkedin font-extrabold text-2xl text-black"></i>

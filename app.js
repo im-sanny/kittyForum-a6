@@ -30,16 +30,18 @@ const allPost = async (searchText = '') => {
                     <p>Author: ${items.author.name}</p>
                 </div>
                 <div>
-                    <h3 class="text-1xl font-bold">${items.title}</h3>
-                    <p>${items.description}</p>
-                    <hr class="my-5 border-dashed ">
+                    <h3 class="text-1xl  font-bold">${items.title}</h3>
+                    <p class="">${items.description}</p>
+
+                    <hr class="my-5 lg:w-[570px]  border-dashed ">
+
                     <div class="flex justify-between">
-                        <div class="flex gap-10">
-                            <p><i class="fa-regular fa-message"></i> ${items.comment_count}</p>
-                            <p><i class="fa-regular fa-eye"></i> ${items.view_count}</p>
-                            <p><i class="fa-regular fa-clock"></i> ${items.posted_time} min</p>
+                        <div class="flex justify-between gap-10">
+                            <p class="lg:w-20"><i class="fa-regular fa-message"></i> ${items.comment_count}</p>
+                            <p class="lg:w-20"><i class="fa-regular fa-eye"></i> ${items.view_count}</p>
+                            <p class="lg:w-20"><i class="fa-regular fa-clock"></i> ${items.posted_time} min</p>
                         </div>
-                        <div class="-mt-1 w-2/6 lg:w-96 flex justify-end">
+                        <div class="-mt-1 w-2/6 lg:w-96 ml-5 lg:ml-36">
                             <button onclick="markAsRead()" class="btn bg-[#10B981] btn-sm btn-circle"><i class="fa-regular fa-envelope-open"></i></button>
                         </div>
                     </div>

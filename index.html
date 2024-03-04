@@ -54,30 +54,34 @@
             </div>
         </nav>
     </header>
+
     <!-- main section starts from here -->
     <main class="mx-3 lg:mx-32">
+
         <!-- Banner section -->
         <div class="bg-cover bg-center bg-fixed" style="background-image: url('path/to/your/image.jpg');">
             <div class="card bg-cover bg-center bg-fixed bg-base-100 lg:h-72 shadow-xl">
                 <div class="card-body bg-[#12132D] rounded-lg"
                     style="background-image: url('assets/images/bgbanner.png');">
-                    <div class="flex justify-between">
-                        <div class="w-3/5 -ml-5">
-                            <h2 class="card-title text-white text-3xl lg:text-4xl font-extrabold">Welcome to the</h2>
-                            <h2 class="text-white text-3xl lg:text-4xl font-extrabold"><span
-                                    class="text-gradient">MiNh</span> Forum</h2>
+                    <div class="lg:flex justify-between ">
+                        <div class="lg:w-3/5 text-center lg:text-start lg:-ml-5">
+                            <h2 class="card-title ml-[50px] lg:ml-0 text-white text-3xl lg:text-4xl font-extrabold">
+                                Welcome to the</h2>
+                            <h2 class="text-3xl lg:text-4xl font-extrabold text-white">
+                                <span class="text-gradient text-center">MiNh</span> Forum
+                            </h2>
+
                             <p class="text-white mt-5 lg:w-[350px]">Share your favorite opinion and win a wp forum
                                 coffee mug!</p>
 
-
                             <div
-                                class="input lg:w-80 h-10 mt-2 lg:mt-5 input-bordered rounded-full flex justify-between items-center gap-2">
+                                class="input lg:w-80 h-10 my-4 lg:mt-5 input-bordered rounded-full flex justify-between items-center gap-2">
                                 <input id="search-field" type="text" class="" placeholder="Search here..." />
                                 <button onclick="handleSearch()"
-                                    class="btn btn-sm rounded-full bg-blue-500 text-white ">Search</button>
+                                    class="btn btn-sm rounded-full bg-blue-500 text-white">Search</button>
                             </div>
                         </div>
-                        <div class="flex items-center justify-center h-full lg:mt-3">
+                        <div class="lg:flex items-center justify-center h-full lg:mt-3">
                             <div class="card lg:w-96 bg-base-100 shadow-xl">
                                 <div class="card-body">
                                     <div class="flex justify-between">
@@ -103,12 +107,12 @@
                 </div>
             </div>
         </div>
-        <!-- End of banner section -->
 
         <!-- spin loader -->
         <div id="loading-spinner" class="text-center my-5 ">
             <span class="loading loading-bars" style="height: 10rem; width: 5rem;"></span>
         </div>
+
         <!-- main section -->
         <div class="my-5 flex justify-center items-center text-center">
             <div class="w-[600px]">
@@ -118,34 +122,31 @@
             </div>
         </div>
         <!-- discuss card -->
+        <div class="lg:flex justify-between gap-5">
+            <div id="discuss-card" class="mt-10 my-5 lg:w-[700px]">
+                <!-- Discuss card content goes here -->
+            </div>
+            <!-- Button outside discuss card -->
+            <div id="right-card" class=" mt-[60px] bg-[#12132D0D] rounded-lg">
+                <div class="flex justify-between lg:w-[300px] p-5  my-2">
+                    <p>Title:</p>
+                    <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span id="count">0</span>)
+                    </p>
 
-        <div id="discuss-card" class="mt-10 my-5">
-               
-            <!-- <div id="right-card">
-                    <div class="card mt-5 lg:mt-0 lg:w-2/6 bg-[#12132D0D] shadow-xl">
-                        <div class="p-4 ">
-                            <div class="flex justify-between my-2">
-                                <p>Title</p>
-                                <p><i class="fa-solid fa-check-double text-green-400"></i> Mark as read (<span>4</span>)</p>
-                            </div>
-                            <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex ">
-                                <p>10 Kids Unaware of Their Halloween Costume</p>
-                                <div class="flex w-20 justify-between">
-                                    <p class="w-20"><i class="fa-regular fa-eye"></i> 1,568</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div> -->
+                </div>
+
+            </div>
         </div>
+
+
         <!-- forum section -->
-        <div id="forum-card" class="mt-5 lg:mt-24">
+        <div id="forum-card" class="mt-14 lg:mt-24">
             <div class="bg-cover bg-center bg-fixed" style="background-image: url('assets/images/bgbanner.png');">
                 <div class="card bg-cover py-5 bg-[#12132D] bg-center bg-fixed bg-base-100 lg:h-96 shadow-xl">
-                    <div class="flex justify-between lg:mx-10 ">
-                        <div class="w-3/5 mt-2 lg:mt-24">
-                            <h1 class="mx-5 text-3xl font-extrabold text-gradient">Join Our Forum</h1>
-                            <p class="text-white w-40 mx-5 mt-5">Share your favorite opinion and win and wp forum coffee mug!
+                    <div class="lg:flex justify-between lg:mx-10 ">
+                        <div class="lg:w-3/5 text-center lg:text-start lg:mt-24">
+                            <h1 class="mx-5 text-4xl font-extrabold text-gradient">Join Our Forum</h1>
+                            <p class="text-white mx-5 mt-5">Share your favorite opinion and win and wp forum coffee mug!
                                 Yes, you can run unit tests and view the results directly within the app. </p>
                             <button
                                 class="btn btn-sm rounded-full text-white border-none bg-blue-500 mx-5 mt-5 w-40">Registered
@@ -158,10 +159,9 @@
                 </div>
             </div>
         </div>
-        <!-- end of forum section -->
 
         <!-- latest post section -->
-        <div class="mt-8 lg:mt-14 text-center">
+        <div class="mt-14 lg:mt-14 text-center">
             <h1 class="text-3xl font-extrabold">Latest Posts</h1>
             <div class="text-center flex justify-center">
                 <p class="lg:w-3/5 mt-2">
@@ -173,7 +173,7 @@
         <!-- post card section -->
         <div id="post-card" class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
         </div>
-        <!-- end of latest post section -->
+
     </main>
     <!-- main section ends here -->
     <div class="divider mt-10 mx-10 lg:mx-40"></div>

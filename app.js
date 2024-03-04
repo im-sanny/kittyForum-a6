@@ -110,7 +110,7 @@ const handleAddInfo = async (title, viewCount) => {
              <div class="bg-[#FFFF] p-2 gap-2 rounded-lg flex justify-between">
                 <p class="">${title}</p>
                 <div class="flex justify-between">
-                <p class="w-20"><i class="fa-regular fa-eye"></i> #${viewCount}</p>
+                <p class="w-20"><i class="fa-regular fa-eye"></i> ${viewCount}</p>
                 </div>
              </div>
           </div>
